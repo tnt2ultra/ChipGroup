@@ -15,7 +15,7 @@
         <activity android:name=".ChoiceChip">
 
         </activity>
-        <activity android:name=".FliterChip" />
+        <activity android:name=".FilterChip" />
         <activity
             android:name=".FloatingActionBarFilterChip"
             android:label="@string/title_activity_floating_action_bar_filter_chip"

@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".ActionChip"
-    android:gravity="center_horizontal">
+    tools:context=".ActionChip">
 
     <EditText
+        android:id="@+id/emailid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/emailid"
         android:hint="Emailid">
 
     </EditText>
 
     <EditText
+        android:id="@+id/mobileid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/mobileid"
         android:hint="MobileNumber"
         android:inputType="number">
 
     </EditText>
 
     <com.google.android.material.chip.Chip
+        android:id="@+id/chip"
+        style="@style/Widget.MaterialComponents.Chip.Action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/chip"
-        android:text="Login"
-        style="@style/Widget.MaterialComponents.Chip.Action"
-        app:chipBackgroundColor="@drawable/chip_selection"
-        app:chipStrokeColor="@color/colorPrimary"
         android:layout_marginTop="10dp"
+        android:text="Login"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:chipIcon="@drawable/ic_lock_black_24dp">
+        app:chipBackgroundColor="@drawable/chip_selection"
+        app:chipIcon="@drawable/ic_lock_black_24dp"
+        app:chipStrokeColor="@color/colorPrimary">
 
     </com.google.android.material.chip.Chip>
 

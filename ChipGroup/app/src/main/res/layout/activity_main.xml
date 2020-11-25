@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="30dp"
@@ -10,46 +10,54 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonInputChip"
         android:layout_width="349dp"
         android:layout_height="wrap_content"
         android:text="Input Chip"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintBottom_toTopOf="@+id/buttonFilterChip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </Button>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonFilterChip"
         android:layout_width="349dp"
         android:layout_height="wrap_content"
         android:text="Filter Chip"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintBottom_toTopOf="@+id/buttonChoiceChip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInputChip">
 
     </Button>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonChoiceChip"
         android:layout_width="349dp"
         android:layout_height="wrap_content"
         android:text="Choice Chip"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintBottom_toTopOf="@+id/buttonActionChip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFilterChip">
 
     </Button>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonActionChip"
         android:layout_width="349dp"
         android:layout_height="wrap_content"
         android:text="Action Chip"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonChoiceChip">
 
     </Button>
 

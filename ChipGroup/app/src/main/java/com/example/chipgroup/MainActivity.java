@@ -1,62 +1,28 @@
 package com.example.chipgroup;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.chipgroup.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button inputchip,filterchip,choicechip,actionchip;
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        inputchip = findViewById(R.id.button1);
-        filterchip = findViewById(R.id.button2);
-        choicechip = findViewById(R.id.button3);
-        actionchip = findViewById(R.id.button4);
+        binding.buttonInputChip.setOnClickListener(view -> goActivity(InputChip.class));
+        binding.buttonFilterChip.setOnClickListener(view -> goActivity(FloatingActionBarFilterChip.class));
+        binding.buttonChoiceChip.setOnClickListener(view -> goActivity(ChoiceChip.class));
+        binding.buttonActionChip.setOnClickListener(view -> goActivity(ActionChip.class));
+    }
 
-        inputchip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent1 = new Intent(MainActivity.this,InputChip.class);
-                startActivity(intent1);
-            }
-        });
-
-        filterchip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent2 = new Intent(MainActivity.this,FloatingActionBarFilterChip.class);
-                startActivity(intent2);
-            }
-        });
-
-        choicechip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent3 = new Intent(MainActivity.this,ChoiceChip.class);
-                startActivity(intent3);
-
-            }
-        });
-
-        actionchip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent4 = new Intent(MainActivity.this,ActionChip.class);
-                startActivity(intent4);
-
-            }
-        });
+    private void goActivity(Class chipClass) {
+        startActivity(new Intent(MainActivity.this, chipClass));
     }
 }
